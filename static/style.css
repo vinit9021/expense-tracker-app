@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #4A90E2; /* A nice blue for accents */
+  --primary-hover-color: #357ABD;
+  --text-color: #333;
+  --secondary-text-color: #6c757d;
+  --background-color: #f4f7f6;
+  --card-background-color: #ffffff;
+  --border-color: #e9ecef;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: var(--card-background-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.navbar-brand .bi {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.footer {
+  background-color: var(--card-background-color);
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+}
+
+.input-group-text {
+  border-radius: 8px 0 0 8px;
+  background-color: #e9ecef;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color);
+  border-color: var(--primary-hover-color);
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table th {
+  font-weight: 600;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.table td {
+  background-color: var(--card-background-color);
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.table tbody tr {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.table tbody tr td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.table tbody tr td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.badge {
+  padding: 0.5em 0.75em;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0;
+  }
+  .card-header {
+    padding: 1rem;
+  }
+}
+
+#expenseChart {
+  max-height: 280px;
+}
+
+#statistics-content {
+  padding-top: 1rem;
+}
