@@ -73,4 +73,4 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ---
 
-Made with ❤️ by your friendly AI assistant.
+Built with ❤️ using Gemini CLI as an AI code assistant, guided by human prompts and review.
