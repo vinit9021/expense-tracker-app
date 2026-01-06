@@ -8,6 +8,10 @@ from sqlalchemy import func
 # Get the absolute path of the directory where the script is running
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+# ✅ CREATE instance folder at runtime (CRITICAL)
+instance_path = os.path.join(basedir, "instance")
+os.makedirs(instance_path, exist_ok=True)
+
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'your_secret_key'  # Add a secret key for flash messages
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key')
