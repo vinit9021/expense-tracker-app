@@ -97,8 +97,12 @@ def delete_expense(id):
     flash('Expense deleted successfully!', 'danger')
     return redirect(url_for('index'))
 
-# ✅ Create database tables on startup (CRITICAL)
+# ✅ CREATE TABLES FOR RENDER
 with app.app_context():
     db.create_all()
+
+# ✅ LOCAL DEVELOPMENT ONLY
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
